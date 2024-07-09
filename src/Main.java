@@ -13,11 +13,6 @@ public class Main {
         bookStore.addBook(new Book("Effective Java", "Joshua Bloch", 45.00, 10));
         bookStore.addBook(new Book("Java: The Complete Reference", "Herbert Schildt", 55.00, 5));
 
-//        bookStore.listBooks();
-//        bookStore.purchaseBook("Effective Java", 3, true);
-//        bookStore.purchaseBook("Java: The Complete Reference", 7, false);
-//        bookStore.purchaseBook("Effective Java", 3, false);
-
         while (true) {
             System.out.println("****************************");
             System.out.println("1. List all books");

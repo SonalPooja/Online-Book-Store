@@ -16,6 +16,7 @@ public class BookStore {
     }
 
     public void listBooks(){
+        System.out.println("List of all books : ");
         for(Book book : books){
             System.out.println("Book name : " + book.getTitle());
             System.out.println(" Author name : " + book.getAuthor());
