@@ -1,6 +1,9 @@
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Class to manage books and handles purchases
+ */
 public class BookStore {
 
     String name;
@@ -11,10 +14,12 @@ public class BookStore {
         this.books = new ArrayList<>();;
     }
 
+    // Adds a book to the inventory
     public void addBook(Book book){
         books.add(book);
     }
 
+    // Shows all books and their details
     public void listBooks(){
         System.out.println("List of all books : ");
         for(Book book : books){
@@ -26,6 +31,7 @@ public class BookStore {
         }
     }
 
+    // Handles book purchases and applies discounts for members
     public void purchaseBook(String title, int quantity, boolean isMember) {
         Book purchasedBook = null;
         MemberDiscount memberDiscount = new MemberDiscount();
@@ -41,7 +47,7 @@ public class BookStore {
             System.out.println("Book not found: " + title);
             return;
         }
-
+        // try-catch block for handling the InsufficientStockException exception
         try {
             double price = purchasedBook.getPrice();
             if (isMember) {

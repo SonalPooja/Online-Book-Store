@@ -13,6 +13,7 @@ public class Main {
         bookStore.addBook(new Book("Effective Java", "Joshua Bloch", 45.00, 10));
         bookStore.addBook(new Book("Java: The Complete Reference", "Herbert Schildt", 55.00, 5));
 
+        // menu
         while (true) {
             System.out.println("****************************");
             System.out.println("1. List all books");
@@ -26,9 +27,11 @@ public class Main {
 
             switch (choice) {
                 case 1:
+                    // printing all books details
                     bookStore.listBooks();
                     break;
                 case 2:
+                    scanner.nextLine();
                     System.out.print("Enter book title: ");
                     String title = scanner.nextLine();
                     System.out.print("Enter author name: ");
@@ -41,7 +44,7 @@ public class Main {
                     bookStore.addBook(new Book(title, author, price, stock));
                     break;
                 case 3:
-                    System.out.println();
+                    scanner.nextLine();
                     System.out.print("Enter book title: ");
                     String bookTitle = scanner.nextLine();
                     System.out.print("Enter quantity: ");

@@ -1,17 +1,19 @@
 public class Book {
 
-    String title;
-    String author;
-    double price;
-    int stock;
+    private String title;
+    private String author;
+    private double price;
+    private int stock;
 
-    public Book(String title, String author, double price, int stock) {
+    // constructor
+    Book(String title, String author, double price, int stock) {
         this.title = title;
         this.author = author;
         this.price = price;
         this.stock = stock;
     }
 
+    // getters and setters to access private variables
     public String getTitle() {
         return title;
     }
@@ -44,6 +46,11 @@ public class Book {
         this.stock = stock;
     }
 
+    /**
+     * reduce the stock by specified quantity
+     * @param quantity
+     * @throws InsufficientStockException
+     */
     public void sellBook(int quantity) throws InsufficientStockException {
         if(stock < quantity){
             throw new InsufficientStockException("Insufficient stock of book : " + title);
